@@ -124,8 +124,8 @@ public:
         consensus.nProposalMaxVersion = 3;
         consensus.nMaxFutureDrift = 60;
         consensus.nStaticReward = 2 * COIN;
-        consensus.nHeightv451Fork = 2722100;
-        consensus.nHeightv452Fork = 2882875;
+        consensus.nHeightv451Fork = 1;
+        consensus.nHeightv452Fork = 2;
         consensus.fDaoClientActivated = true;
 
         /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
@@ -209,7 +209,7 @@ public:
         pchMessageStart[1] = 0x50;
         pchMessageStart[2] = 0x34;
         pchMessageStart[3] = 0x20;
-        nDefaultPort = 44440;
+        nDefaultPort = 1311;
         nPruneAfterHeight = 100000;
         bnProofOfWorkLimit = arith_uint256(~arith_uint256() >> 16);
 
@@ -228,8 +228,8 @@ public:
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x04)(0x88)(0xB2)(0x1E).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
-        vSeeds.push_back(CDNSSeedData("seed 1 nav.community", "seed.nav.community"));
-        vSeeds.push_back(CDNSSeedData("seed 2 nav.community", "seed2.nav.community"));
+        vSeeds.push_back(CDNSSeedData("seed 1 unny.nl", "seed.unny.nl"));
+        vSeeds.push_back(CDNSSeedData("seed 2 unny.nl", "seed2.unny.nl"));
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -242,7 +242,7 @@ public:
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             ( 0, uint256S("0x00006a4e3e18c71c6d48ad6c261e2254fa764cf29607a4357c99b712dfbb8e6a"))
-            (10000, uint256S("0x844f1eab31e8773328ba21970362b4fcff19622f13787cbbe164649ad2393b7a"))
+            /*(10000, uint256S("0x844f1eab31e8773328ba21970362b4fcff19622f13787cbbe164649ad2393b7a"))
             (10000, uint256S("0x844f1eab31e8773328ba21970362b4fcff19622f13787cbbe164649ad2393b7a"))
             (20000, uint256S("0xfea6d227117db665c5cff2fca0b29d850c5e7f064463d001f5228e80a7e21624"))
             (30000, uint256S("0x5e6212b3b23ed3e5092d7765f7ae36512ecdc254f84c9988161e955d94c91a48"))
@@ -265,9 +265,9 @@ public:
             (1750000,uint256S("0x713cbac2df077bacb25dedf4acd60745f102cbe53ede019b738a6864fc0b12c6"))
             (2000000,uint256S("0x41b723e003cab30d326a0fae995521554ab59e550e1e0013187b3267d09dd42c"))
             (2250000,uint256S("0x1f7d459f6dcb3752868395819ac676adccfb0d0ec904a60b9fcb15879bcc5228"))
-            (2500000,uint256S("0x38000f4f433d47f171c7cccc001a2e7c9292620b37170d347b5a21ef19243dda")),
-            1535607904, // * UNIX timestamp of last checkpoint block
-            5067164,    // * total number of transactions between genesis and last checkpoint
+            (2500000,uint256S("0x38000f4f433d47f171c7cccc001a2e7c9292620b37170d347b5a21ef19243dda"))*/,
+            1460561040, // * UNIX timestamp of last checkpoint block
+            0,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             7000        // * estimated number of transactions per day after checkpoint
         };
